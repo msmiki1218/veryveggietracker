@@ -1,5 +1,5 @@
 # VERY VEGGIE TRACKER
-#### Video Demo: <URL HERE>
+#### Video Demo: [https://youtu.be/UFNapAqmcnE](https://youtu.be/UFNapAqmcnE)
 #### Description: A specialized web application for tracking the 10-generation Sims 4 "Very Veggie Legacy Challenge" by lilsimsie.
 ## The Very Veggie Legacy Tracker
 
