@@ -1,5 +1,7 @@
 import sqlite3
 
+# to seed the database with initial data for Very Veggie Rules
+
 # Connect to your database file
 db = sqlite3.connect("veggie.db")
 cursor = db.cursor()
