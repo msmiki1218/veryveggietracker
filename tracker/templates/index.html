@@ -8,14 +8,23 @@
         {% for gen in generations %}
         <div class="w3-col l4 m6 s12 w3-margin-bottom">
             <a href="{{ url_for('tracker.generation_view', veggie_name=gen['name'].lower()) }}" style="text-decoration:none">
-                <div class="w3-card-4 w3-round-large w3-hover-opacity w3-white">
+                <div class="w3-card-4 w3-round-large w3-white {% if gen['is_mastered'] == 1 %} mastered-glow {% endif %}">
                     
-                    <header class="w3-container w3-round-large" style="background-color: {{ gen['color_code'] }}; color: white;">
-                        <h3>{{ gen['name'] }}</h3>
+                    <header class="w3-container w3-round-large" style="background-color: {{ gen['color_code'] }}; position: relative;">
+
+                        {% if gen['is_mastered'] == 1 %}
+                        <span class="w3-tag w3-yellow w3-round w3-display-topright" style="margin: 8px; font-weight: bold; border: 1px solid orange;">
+                            🏆 MASTERED
+                        </span>
+                        {% endif %}
+
+                        <h3 style="background-color: {{ gen['color_code'] }}; color: white">{{ gen['name'] }}</h3>
                     </header>
 
                     <div class="w3-container w3-padding">
                         <p><strong>Career:</strong> {{ gen['career'] }}</p>
+                        <p><strong>Aspiration(s):</strong> {{ gen['aspiration'] }}</p>
+                        <p><strong>Note:</strong> {{ gen['requirements'] }}</p>
                         
                         {# Simplified math to help VSCode's parser #}
                         {% if gen['total_count'] > 0 %}

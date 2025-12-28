@@ -39,8 +39,13 @@ input:checked + span {
     transition: 0.3s;
 }
 
-/* Add this to your styles.css */
+/* If the image fails to load, don't show the ugly border */
 img {
-    /* If the image fails to load, don't show the ugly border */
     alt: ""; 
+}
+
+/* If the card is mastered, give it a gold glow */
+.mastered-glow {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    border: 2px solid gold;
 }

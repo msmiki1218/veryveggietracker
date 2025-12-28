@@ -18,8 +18,11 @@ def index():
             generations.name, 
             generations.color_code, 
             generations.career,
+            generations.aspiration,
+            generations.requirements,
             COALESCE(SUM(user_progress.completed), 0) AS completed_count,
-            (SELECT COUNT(*) FROM goals WHERE goals.generation_id = generations.id) AS total_count
+            (SELECT COUNT(*) FROM goals WHERE goals.generation_id = generations.id) AS total_count,
+            COALESCE(MAX(user_progress.aspiration_completed), 0) AS is_mastered
         FROM generations
         LEFT JOIN goals ON generations.id = goals.generation_id
         LEFT JOIN user_progress ON goals.id = user_progress.goal_id 
@@ -86,4 +89,24 @@ def update_goal():
     db.commit()
     
     return jsonify({"success": True, "message": "Database updated!"})
+
+@tracker_bp.route("/update_aspiration", methods=["POST"])
+def update_aspiration():
+    data = request.get_json()
+    gen_id = data.get("gen_id")
+    completed = data.get("completed")
+    user_id = session.get("user_id")
+
+    db = get_db()
+    # We update the progress table for this specific vegetable generation
+    db.execute("""
+        UPDATE user_progress 
+        SET aspiration_completed = ? 
+        WHERE user_id = ? AND goal_id IN (
+            SELECT id FROM goals WHERE generation_id = ?
+        )
+    """, (completed, user_id, gen_id))
+    db.commit()
+    
+    return jsonify({"success": True})
     

@@ -37,3 +37,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.querySelectorAll('.aspiration-checkbox').forEach(box => {
+    box.addEventListener('change', function() {
+        const genId = this.dataset.genId;
+        const status = this.checked ? 1 : 0;
+
+        fetch('/update_aspiration', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ gen_id: genId, completed: status })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Aspiration updated:", data);
+        });
+    });
+});
