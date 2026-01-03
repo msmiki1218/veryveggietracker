@@ -19,6 +19,11 @@
         <a href="" class="w3-bar-item w3-button w3-left">
             <img src="../static/images/logo.png" alt="Logo" style="height: 25px;">
         </a>
+        <a href="{{ url_for('tracker.index') }}" class="w3-bar-item w3-button w3-hover-theme">Home</a>
+        <a href="{{ url_for('tracker.quit_app') }}" 
+            class="w3-bar-item w3-button w3-theme-action w3-right">
+            <img src="../static/images/power.png" alt="Quit"> Quit Tracker
+        </a>
         {% if session['user_id'] %}
             <a href="{{ url_for('tracker.index') }}" class="w3-bar-item w3-button w3-hover-theme">Dashboard</a>
             <a href="{{ url_for('auth.logout') }}" class="w3-bar-item w3-button w3-hover-theme w3-right">Log Out</a>
