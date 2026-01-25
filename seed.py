@@ -36,8 +36,8 @@ goals = [
     (2, 'As an adult wear the eggplant costume for every outfit'),
     (2, 'Become a nectar connoisseur and maintain a nector cellar'),
     (2, 'Max the Romance Skill'),
-    (2, 'Max the Fitness Skill')
-    (2, 'Max the Nectar Making Skill')
+    (2, 'Max the Fitness Skill'),
+    (2, 'Max the Nectar Making Skill'),
     (2, 'Max the Dancing Skill'),
     # Gen 3: Carrot (ID 3)
     (3, 'Max the Horse Riding skill'),
