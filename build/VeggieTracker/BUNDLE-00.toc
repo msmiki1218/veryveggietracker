@@ -1,3 +1,0 @@
-([('VeggieTracker',
-   '/Users/moniquethesimmer/Documents/CS50/VeggieDesktop/dist/VeggieTracker',
-   'EXECUTABLE')],)
