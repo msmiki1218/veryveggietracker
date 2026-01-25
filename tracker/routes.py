@@ -30,7 +30,7 @@ def index():
             generations.color_code, 
             generations.career,
             generations.aspiration,
-            generations.requirements,
+            generations.traits,
             COALESCE(SUM(user_progress.completed), 0) AS completed_count,
             (SELECT COUNT(*) FROM goals WHERE goals.generation_id = generations.id) AS total_count,
             COALESCE(MAX(user_progress.aspiration_completed), 0) AS is_mastered
