@@ -4,9 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/auth/templates/login.html</key>
+		<data>
+		zUKuxrteEWIkxzUJ3NxKKaBldts=
+		</data>
+		<key>Resources/auth/templates/register.html</key>
+		<data>
+		SgWni4yKP6ghZWy/x1hSfDMt5Ac=
+		</data>
 		<key>Resources/base_library.zip</key>
 		<data>
-		GyhMCKxmKDlwHg02RA8QKyeZKYA=
+		4XDkrjAFZu+e+mPT31ON7vz9Zuo=
 		</data>
 		<key>Resources/click-8.3.1.dist-info/INSTALLER</key>
 		<data>
@@ -228,9 +236,17 @@
 		<data>
 		e3dRTt5RNV6ZI9DuQ28MvRo2J1M=
 		</data>
+		<key>Resources/tracker/templates/generation.html</key>
+		<data>
+		xe8BKGtZvn3N0bJORp11vHMXS4M=
+		</data>
+		<key>Resources/tracker/templates/index.html</key>
+		<data>
+		6FfSWiBO85NiIYNxQpAszTmOvuo=
+		</data>
 		<key>Resources/veggie.db</key>
 		<data>
-		3zol7rRlwK4rFwddXxcQUp+BPdA=
+		j2odxDBNvkcenn3iAAYGVh3e0G8=
 		</data>
 		<key>Resources/webview/__init__.py</key>
 		<data>
@@ -567,6 +583,11 @@
 			</data>
 			<key>requirement</key>
 			<string>cdhash H"08c53ffdfe01f6d259f3812b9383a61ee8c86669"</string>
+		</dict>
+		<key>Frameworks/auth</key>
+		<dict>
+			<key>symlink</key>
+			<string>../Resources/auth</string>
 		</dict>
 		<key>Frameworks/base_library.zip</key>
 		<dict>
@@ -1140,6 +1161,11 @@
 			<key>symlink</key>
 			<string>../Resources/templates</string>
 		</dict>
+		<key>Frameworks/tracker</key>
+		<dict>
+			<key>symlink</key>
+			<string>../Resources/tracker</string>
+		</dict>
 		<key>Frameworks/veggie.db</key>
 		<dict>
 			<key>symlink</key>
@@ -1185,11 +1211,25 @@
 			<key>symlink</key>
 			<string>../Frameworks/WebKit</string>
 		</dict>
+		<key>Resources/auth/templates/login.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TfbX/jkywFTcVIXMXh8k+Lm9oxbiOuQrCoxXmofiuPo=
+			</data>
+		</dict>
+		<key>Resources/auth/templates/register.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PTe6jOyuX/y2xIIyjk664RZRgrgKti3mAaCSkEa0aPI=
+			</data>
+		</dict>
 		<key>Resources/base_library.zip</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TnmQtnJkfd38uofeY9/SdCiUQ3o+nJWS/hnsq6Pn4sg=
+			6tadttpmJu6hqXxLcrpwyk3LN6BW9Uxs4gJFnSqhWMU=
 			</data>
 		</dict>
 		<key>Resources/click-8.3.1.dist-info/INSTALLER</key>
@@ -1602,11 +1642,25 @@
 			jTrZIk65EKIyvaFaDakyiHr/rCKM38V5TQxro5FXFa0=
 			</data>
 		</dict>
+		<key>Resources/tracker/templates/generation.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LmdiRbvSDeCYHKTJBU+mA5Yk6gDe/3azCbklJCXSyQE=
+			</data>
+		</dict>
+		<key>Resources/tracker/templates/index.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ccENC5FNeF3E5IFaaTLHFnKERqPl5ibnp0ol2igJaHk=
+			</data>
+		</dict>
 		<key>Resources/veggie.db</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ev2xOj4qW+E9J8+b8KEHqPj5lvkDnRAnSmTaNJtTz4=
+			QACY7WX7/wAlUkHn935UCsBNRDlMx4hcoeyB5O5JSSI=
 			</data>
 		</dict>
 		<key>Resources/webview/__init__.py</key>

@@ -1,7 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import collect_all
 
-datas = [('veggie.db', '.'), ('templates', 'templates'), ('static', 'static')]
+datas = [('veggie.db', '.'), ('templates', 'templates'), ('static', 'static'), ('auth/templates', 'auth/templates'), ('tracker/templates', 'tracker/templates')]
 binaries = []
 hiddenimports = []
 tmp_ret = collect_all('webview')

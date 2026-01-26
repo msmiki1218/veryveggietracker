@@ -56,7 +56,7 @@
  [],
  False,
  False,
- 1769383761,
+ 1769385070,
  [('runw',
    '/Users/moniquethesimmer/Documents/CS50/VeggieDesktop/.venv/lib/python3.12/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
    'EXECUTABLE')],

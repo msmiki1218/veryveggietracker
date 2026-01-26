@@ -30,7 +30,7 @@ def login():
         cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
         user = cursor.fetchone()
 
-        if user is None or not check_password_hash(user["hash"], password):
+        if user is None or not check_password_hash(user["password_hash"], password):
             error = "Invalid username or password."
             return render_template("login.html", error=error)
         
@@ -76,7 +76,7 @@ def register():
 
         # 3. Create User
         hash_pw = generate_password_hash(password)
-        cursor.execute("INSERT INTO users (username, hash) VALUES (?, ?)", (username, hash_pw))
+        cursor.execute("INSERT INTO users (username, password_hash) VALUES (?, ?)", (username, hash_pw))
         
         # Get the ID of the new user using lastrowid (more efficient)
         new_user_id = cursor.lastrowid
