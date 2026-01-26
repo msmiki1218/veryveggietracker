@@ -106,7 +106,7 @@ goals = [
     (6, 'Get really into grilling (own a grill and have a dedicated outdoor kitchen)'),
     (6, 'Complete both aspirations'),
     # Gen 7: Cauliflower (ID 7)
-    (7, 'Max the Thanatology, Gemology, Medium, and Writing skills'),
+    (7, 'Max the Thanatology skill'),
     (7, 'Max the Geomology skill'),
     (7, 'Max the Medium skill'),
     (7, 'Max the Writing skill'),
