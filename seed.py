@@ -1,10 +1,50 @@
 import sqlite3
 
-# to seed the database with initial data for Very Veggie Rules
-
-# Connect to your database file
 db = sqlite3.connect("veggie.db")
 cursor = db.cursor()
+
+# 1. THE WIPE (Prevents duplicates)
+cursor.execute("DROP TABLE IF EXISTS user_progress")
+cursor.execute("DROP TABLE IF EXISTS goals")
+cursor.execute("DROP TABLE IF EXISTS generations")
+cursor.execute("DROP TABLE IF EXISTS users")
+
+# 2. THE SETUP (Re-creates the empty tables)
+cursor.execute("""
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+)""")
+
+cursor.execute("""
+CREATE TABLE generations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    color_code TEXT,
+    career TEXT,
+    aspiration TEXT,
+    traits TEXT
+)""")
+
+cursor.execute("""
+CREATE TABLE goals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    generation_id INTEGER,
+    description TEXT NOT NULL,
+    FOREIGN KEY (generation_id) REFERENCES generations(id)
+)""")
+
+cursor.execute("""
+CREATE TABLE user_progress (
+    user_id INTEGER,
+    goal_id INTEGER,
+    completed BOOLEAN DEFAULT FALSE,
+    aspiration_completed BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (user_id, goal_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (goal_id) REFERENCES goals(id)
+)""")
 
 # insert generations
 generations = [

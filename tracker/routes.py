@@ -72,6 +72,15 @@ def generation_view(veggie_name):
     """, (session["user_id"], veggie_row["id"]))
 
     progress_list = cursor.fetchall()
+
+    # --- ADD THIS PRINT STATEMENT HERE ---
+    print(f"\n--- DEBUG: {name} Generation ---")
+    print(f"Number of goals returned from DB: {len(progress_list)}")
+    for row in progress_list:
+        print(f"Goal ID: {row['id']} | Description: {row['description']}")
+    print("----------------------------------\n")
+    # -------------------------------------
+    
     return render_template("generation.html", goals=progress_list, veggie=veggie_row)
 
 # The AJAX Update Route (No changes needed here as it uses JSON)
